@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Alexandre S" />
+    <title>Chap's OnFood – Order</title>
+    <link rel="stylesheet" href="order.css" />
+  </head>
+
+  <body>
+
+    <!-- ===== WRAPPER: Liquid layout container ===== -->
+    <div id="wrapper">
+
+      <!-- ===== HEADER: Top of the page ===== -->
+      <header>
+
+        <!-- LOGO: id="logo" — position: absolute in CSS -->
+        <img id="logo" src="https://uploads.onecompiler.io/44bybkn4v/44h886kvk/ChatGPT%20Image%20Mar%2026,%202026%20at%2011_45_47%20PM.png" alt="Chap's OnFood Logo" />
+
+        <!-- NAV: floated right in CSS -->
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="order.html">Order</a>
+        </nav>
+
+        <h1>Chap's OnFood</h1>
+        <p><em>LCU Cafeteria Pre-Order System</em></p>
+        <!-- JS: showGreeting() fills this on page load -->
+        <p id="greeting-msg"></p>
+
+      </header>
+
+      <hr />
+
+      <!-- ===== INTRO SECTION ===== -->
+      <section>
+        <h2>Place Your Order</h2>
+        <h3>Fill out the form below to pre-order your meal</h3>
+        <p>
+          Complete all required fields and submit your order at least
+          <strong>30 minutes before your desired pickup time</strong>.
+          Make sure your student ID is correct — it will be used to verify your
+          identity at the cafeteria counter.
+        </p>
+        <p>
+          <em>Not sure what to order? Check the <a href="menu.html">Menu page</a> first!</em>
+        </p>
+      </section>
+
+      <hr />
+
+      <!-- ===== INSTRUCTIONS SECTION: id="instructions" — white background in CSS ===== -->
+      <section id="instructions">
+        <h2>Before You Order</h2>
+        <p>Please follow these instructions to ensure a smooth pickup experience:</p>
+
+        <ol>
+          <li>Browse the <a href="menu.html">Menu page</a> and note the items you want.</li>
+          <li>Fill in your <strong>student information</strong> accurately in the form below.</li>
+          <li>Select your <strong>meal items</strong> and specify the quantity for each.</li>
+          <li>Choose your <strong>pickup time</strong> — at least 30 minutes from now.</li>
+          <li>Click <strong>Submit Order</strong> and wait for confirmation at the counter.</li>
+        </ol>
+
+        <p>Need help? Contact us at <a href="mailto:chapsonline@lcu.edu">chapsonline@lcu.edu</a>.</p>
+      </section>
+
+      <hr />
+
+      <!-- ===== ORDER FORM SECTION: id="order-form" ===== -->
+      <section id="order-form">
+        <h2>Order Form</h2>
+
+        <form action="submit_order.html" method="post">
+
+          <!-- Student Information -->
+          <h3>Student Information</h3>
+
+          <p>
+            <strong>Full Name:</strong>
+            <input class="text-input" type="text" id="full-name" name="full_name" />
+          </p>
+
+          <p>
+            <strong>Student ID:</strong>
+            <input class="text-input" type="text" id="student-id" name="student_id" />
+          </p>
+
+          <p>
+            <strong>LCU Email Address:</strong>
+            <input class="text-input" type="text" id="email" name="email" />
+          </p>
+
+          <hr />
+
+          <!-- Meal Selection -->
+          <h3>Meal Selection</h3>
+          <p>Select the items you would like to order and specify the quantity.</p>
+
+          <!-- Breakfast items -->
+          <h4>Breakfast</h4>
+
+          <p>
+            <input type="checkbox" name="item_breakfast1" value="classic_breakfast" />
+            <strong>Classic Breakfast Plate</strong>
+            <span class="item-price">$4.50</span>
+            &nbsp;&nbsp; Quantity:
+            <input class="text-input" type="text" id="qty-breakfast1" name="qty_breakfast1" size="3" style="width: 50px;" />
+          </p>
+
+          <p>
+            <input type="checkbox" name="item_breakfast2" value="pancakes" />
+            <strong>Buttermilk Pancakes</strong>
+            <span class="item-price">$3.75</span>
+            &nbsp;&nbsp; Quantity:
+            <input class="text-input" type="text" id="qty-breakfast2" name="qty_breakfast2" size="3" style="width: 50px;" />
+          </p>
+
+          <!-- Lunch items -->
+          <h4>Lunch</h4>
+
+          <p>
+            <input type="checkbox" name="item_lunch1" value="burger" />
+            <strong>Chap's Classic Burger</strong>
+            <span class="item-price">$6.25</span>
+            &nbsp;&nbsp; Quantity:
+            <input class="text-input" type="text" id="qty-lunch1" name="qty_lunch1" size="3" style="width: 50px;" />
+          </p>
+
+          <p>
+            <input type="checkbox" name="item_lunch2" value="salad" />
+            <strong>Garden Fresh Salad</strong>
+            <span class="item-price">$5.00</span>
+            &nbsp;&nbsp; Quantity:
+            <input class="text-input" type="text" id="qty-lunch2" name="qty_lunch2" size="3" style="width: 50px;" />
+          </p>
+
+          <p>
+            <input type="checkbox" name="item_lunch3" value="pasta" />
+            <strong>Penne Marinara</strong>
+            <span class="item-price">$5.50</span>
+            &nbsp;&nbsp; Quantity:
+            <input class="text-input" type="text" id="qty-lunch3" name="qty_lunch3" size="3" style="width: 50px;" />
+          </p>
+
+          <!-- Dinner items -->
+          <h4>Dinner</h4>
+
+          <p>
+            <input type="checkbox" name="item_dinner1" value="chicken" />
+            <strong>Grilled Chicken Plate</strong>
+            <span class="item-price">$7.50</span>
+            &nbsp;&nbsp; Quantity:
+            <input class="text-input" type="text" id="qty-dinner1" name="qty_dinner1" size="3" style="width: 50px;" />
+          </p>
+
+          <p>
+            <input type="checkbox" name="item_dinner2" value="tacos" />
+            <strong>Taco Night Special</strong>
+            <span class="item-price">$6.75</span>
+            &nbsp;&nbsp; Quantity:
+            <input class="text-input" type="text" id="qty-dinner2" name="qty_dinner2" size="3" style="width: 50px;" />
+          </p>
+
+          <hr />
+
+          <!-- Salad Dressing Preference -->
+          <h3>Salad Dressing Preference</h3>
+          <p><em>Only applies if you ordered the Garden Fresh Salad.</em></p>
+
+          <p>
+            <input type="radio" name="dressing" value="ranch" /> Ranch<br />
+            <input type="radio" name="dressing" value="caesar" /> Caesar<br />
+            <input type="radio" name="dressing" value="vinaigrette" /> Vinaigrette
+          </p>
+
+          <hr />
+
+          <!-- Pickup Details -->
+          <h3>Pickup Details</h3>
+
+          <p>
+            <strong>Preferred Pickup Time:</strong>
+            <select class="form-select" id="pickup-time" name="pickup_time">
+              <option value="">-- Select a time --</option>
+              <option value="730am">7:30 AM</option>
+              <option value="800am">8:00 AM</option>
+              <option value="830am">8:30 AM</option>
+              <option value="900am">9:00 AM</option>
+              <option value="930am">9:30 AM</option>
+              <option value="1000am">10:00 AM</option>
+              <option value="1130am">11:30 AM</option>
+              <option value="1200pm">12:00 PM</option>
+              <option value="1230pm">12:30 PM</option>
+              <option value="100pm">1:00 PM</option>
+              <option value="130pm">1:30 PM</option>
+              <option value="200pm">2:00 PM</option>
+              <option value="500pm">5:00 PM</option>
+              <option value="530pm">5:30 PM</option>
+              <option value="600pm">6:00 PM</option>
+              <option value="630pm">6:30 PM</option>
+            </select>
+          </p>
+
+          <p>
+            <strong>Payment Method:</strong>
+            <select class="form-select" id="payment" name="payment_method">
+              <option value="">-- Select a method --</option>
+              <option value="meal_plan">Meal Plan</option>
+              <option value="cash">Cash at Pickup</option>
+            </select>
+          </p>
+
+          <hr />
+
+          <!-- Special Instructions -->
+          <h3>Special Instructions</h3>
+          <p>
+            <strong>Any allergies, dietary restrictions, or special requests?</strong>
+            <textarea id="instructions-text" name="special_instructions" rows="5" cols="50">Write your instructions here...</textarea>
+          </p>
+
+          <hr />
+
+          <!-- Submit -->
+          <h3>Submit Your Order</h3>
+          <p>
+            Please review your selections before submitting. Once submitted, your order
+            will be prepared for your chosen pickup time.
+          </p>
+          <!-- JS: result box — filled by validateOrder() or showConfirmation() -->
+          <div id="order-result" style="display:none; padding:16px 20px; margin-top:20px;"></div>
+
+          <p>
+            <!-- type="button" prevents page reload; onclick calls validateOrder() -->
+            <input class="submit-btn" type="button" value="Submit Order" onclick="validateOrder()" />
+          </p>
+
+        </form>
+      </section>
+
+      <hr />
+
+      <!-- ===== PICKUP INFO TABLE: id="pickup-info" — white background in CSS ===== -->
+      <section id="pickup-info">
+        <h2>Pickup Location &amp; Hours</h2>
+        <p>Come to the cafeteria front counter at your chosen pickup time. Show your student ID to collect your order.</p>
+
+        <table>
+          <tr>
+            <th>Meal Period</th>
+            <th>Pickup Hours</th>
+            <th>Counter Location</th>
+          </tr>
+          <tr>
+            <td>Breakfast</td>
+            <td>7:00 AM – 10:30 AM</td>
+            <td>Front Counter – Left Side</td>
+          </tr>
+          <tr>
+            <td>Lunch</td>
+            <td>11:00 AM – 2:30 PM</td>
+            <td>Front Counter – Center</td>
+          </tr>
+          <tr>
+            <td>Dinner</td>
+            <td>4:30 PM – 7:00 PM</td>
+            <td>Front Counter – Right Side</td>
+          </tr>
+        </table>
+      </section>
+
+      <hr />
+
+      <!-- ===== QUICK LINKS ===== -->
+      <section>
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="#instructions">Order Instructions</a></li>
+          <li><a href="#order-form">Jump to the Order Form</a></li>
+          <li><a href="#pickup-info">Pickup Hours &amp; Location</a></li>
+          <li><a href="menu.html">View the Full Menu</a></li>
+          <li><a href="index.html">Back to Home</a></li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <!-- ===== FOOTER ===== -->
+      <footer>
+        <p><strong>Chap's OnFood</strong> – LCU Cafeteria Pre-Order System</p>
+        <p>5601 19th St, Lubbock, TX 79407</p>
+        <p>
+          Contact us:
+          <a href="mailto:chapsonline@lcu.edu">chapsonline@lcu.edu</a>
+        </p>
+        <p>2026 Lubbock Christian University Cafeteria</p>
+      </footer>
+
+    </div><!-- end #wrapper -->
+
+    <script src="main.js"></script>
+    <script src="order.js"></script>
+    <script>showGreeting();</script>
+  </body>
+</html>

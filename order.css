@@ -1,0 +1,384 @@
+/* Order Page */
+
+
+/* ===== 1. RESET & BASE ===== */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E8E4DF;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #1A1A1A;
+    line-height: 1.6;
+}
+
+
+/* ===== 2. LAYOUT ===== */
+
+#wrapper {
+    max-width: 960px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F8F5F0;
+}
+
+
+/* ===== 3. TYPOGRAPHY ===== */
+/* Font 1: Georgia (serif) */
+/* Font 2: Segoe UI / Arial (sans-serif) */
+/* Font 3: Courier New (monospace) */
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 2.4em;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 6px;
+    color: #FFFFFF;
+}
+
+h2 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1.6em;
+    color: #003DA5;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1.15em;
+    color: #5C3317;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #E8E4DF;
+}
+
+h4 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 0.95em;
+    color: #003DA5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.75;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #1A1A1A;
+}
+
+ol, ul {
+    padding-left: 22px;
+    line-height: 1.9;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+
+/* ===== 4. COLORS ===== */
+/* #003DA5 — LCU Blue */
+/* #5C3317 — Brown    */
+/* #FFFFFF — White    */
+/* #F8F5F0 — Off-white */
+/* #E8E4DF — Light gray */
+/* #1A1A1A — Text */
+
+hr {
+    border: none;
+    border-top: 2px solid #E8E4DF;
+    margin: 0;
+}
+
+
+/* ===== 5. HEADER ===== */
+
+header {
+    background-color: #003DA5;
+    padding-top: 22px;
+    padding-bottom: 18px;
+    padding-left: 120px;
+    padding-right: 40px;
+    border-bottom: 5px solid #5C3317;
+    overflow: hidden;
+    position: relative;
+}
+
+header p {
+    color: #E8E4DF;
+    font-size: 0.9em;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* ===== 6. LOGO ===== */
+
+#logo {
+    position: absolute;
+    top: -15px;
+    right: 812px;
+    width: 172px;
+    height: 172px;
+    object-fit: contain;
+}
+
+
+/* ===== 7. NAVIGATION ===== */
+
+nav {
+    float: right;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: 6px;
+    border: 2px solid #FFFFFF;
+}
+
+
+/* ===== 8. SECTIONS ===== */
+
+section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#instructions {
+    background-color: #FFFFFF;
+}
+
+#order-form {
+    background-color: #F8F5F0;
+}
+
+#pickup-info {
+    background-color: #FFFFFF;
+}
+
+
+/* ===== 9. FORM ===== */
+
+form {
+    margin-top: 16px;
+}
+
+form p {
+    margin-bottom: 18px;
+}
+
+form p strong {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95em;
+    color: #1A1A1A;
+    display: block;
+    margin-bottom: 6px;
+}
+
+
+/* ===== 10. FORM INPUTS ===== */
+
+.text-input {
+    width: 75%;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 2px solid #E8E4DF;
+    background-color: #FFFFFF;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1em;
+    color: #1A1A1A;
+    margin-top: 4px;
+}
+
+.form-select {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 2px solid #E8E4DF;
+    background-color: #FFFFFF;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1em;
+    color: #1A1A1A;
+    margin-top: 4px;
+    width: 60%;
+}
+
+textarea {
+    width: 75%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 2px solid #E8E4DF;
+    background-color: #FFFFFF;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1em;
+    color: #1A1A1A;
+    margin-top: 4px;
+    line-height: 1.6;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+form hr {
+    border-top: 1px solid #E8E4DF;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.item-price {
+    font-family: 'Courier New', Courier, monospace;
+    color: #5C3317;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+
+/* ===== 11. SUBMIT BUTTON ===== */
+
+.submit-btn {
+    background-color: #003DA5;
+    color: #FFFFFF;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1.05em;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border: 2px solid #003DA5;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+}
+
+
+/* ===== 12. TABLES ===== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 0.95em;
+}
+
+th {
+    background-color: #003DA5;
+    color: #FFFFFF;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-bottom: 1px solid #E8E4DF;
+    color: #1A1A1A;
+}
+
+td strong {
+    font-family: 'Courier New', Courier, monospace;
+    color: #003DA5;
+}
+
+
+/* ===== 13. LINKS ===== */
+
+a {
+    color: #003DA5;
+    text-decoration: underline;
+}
+
+ul li a {
+    font-weight: bold;
+}
+
+.cta-link {
+    background-color: #5C3317;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 22px;
+    padding-right: 22px;
+    margin-right: 10px;
+    border: 2px solid #5C3317;
+}
+
+
+/* ===== 14. FOOTER ===== */
+
+footer {
+    background-color: #5C3317;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-top: 4px solid #003DA5;
+    text-align: center;
+}
+
+footer p {
+    color: #FFFFFF;
+    font-size: 0.9em;
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+footer a {
+    color: #E8E4DF;
+    text-decoration: underline;
+}
+
+
+/* ===== 15. JAVASCRIPT ELEMENTS ===== */
+
+#greeting-msg {
+    margin-top: 6px;
+    margin-bottom: 0;
+    font-style: normal;
+}
+
+#order-result {
+    font-size: 0.97em;
+    line-height: 1.6;
+}
+
+.submit-btn {
+    cursor: pointer;
+}

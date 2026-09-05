@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Alexandre S" />
+    <title>Chap's OnFood – Home</title>
+    <link rel="stylesheet" href="styles1.css" />
+  </head>
+
+  <body>
+
+    <!-- ===== WRAPPER: Liquid layout container ===== -->
+    <div id="wrapper">
+
+      <!-- ===== HEADER: Top of the page ===== -->
+      <header>
+
+        <!-- LOGO: id="logo" — position: absolute in CSS -->
+        <img id="logo" src="https://uploads.onecompiler.io/44bybkn4v/44h886kvk/ChatGPT%20Image%20Mar%2026,%202026%20at%2011_45_47%20PM.png" alt="Chap's OnFood Logo" />
+
+        <!-- NAV: floated right in CSS -->
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="order.html">Order</a>
+        </nav>
+
+        <h1>Chap's OnFood</h1>
+        <p><em>LCU Cafeteria Pre-Order System</em></p>
+        <!-- JS: showGreeting() fills this on page load -->
+        <p id="greeting-msg"></p>
+
+      </header>
+
+      <hr />
+
+      <!-- ===== HERO IMAGE: id="hero-img" — relative sizing adapts to browser width ===== -->
+      <div>
+        <img
+          id="hero-img"
+          src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=900&q=80"
+          alt="LCU Cafeteria food"
+          title="Chap's OnFood – LCU Cafeteria"
+        />
+      </div>
+
+      <hr />
+
+      <!-- ===== INTRO SECTION: What this page is about ===== -->
+      <section>
+        <h2>Welcome to Chap's OnFood</h2>
+        <h3>Skip the line. Enjoy the food.</h3>
+        <p>
+          <strong>Chap's OnFood</strong> is the official online pre-order platform for the
+          <strong>LCU Cafeteria</strong>. Instead of waiting in a long line during busy hours,
+          you can now browse the menu, place your order online, and simply show up at your
+          chosen pickup time. Your meal will be ready and waiting for you.
+        </p>
+        <p>
+          This service is available exclusively for <em>LCU students</em>. All you need is
+          your student ID and a couple of minutes to place your order.
+        </p>
+
+        <!-- JS FEATURE: onclick calls checkCafeteriaStatus() from main.js -->
+        <button id="status-btn" onclick="checkCafeteriaStatus()">Check Cafeteria Hours</button>
+
+        <!-- JS: hidden by default — checkCafeteriaStatus() shows and fills it -->
+        <div id="status-box" style="display:none;">
+          <p id="status-msg"></p>
+        </div>
+
+      </section>
+
+      <hr />
+
+      <!-- ===== HOW IT WORKS SECTION: id="how-it-works" — alternate background in CSS ===== -->
+      <section id="how-it-works">
+        <h2>How It Works</h2>
+        <p>Follow these three simple steps to pre-order your meal:</p>
+
+        <!-- Ordered list of steps -->
+        <ol>
+          <li>
+            <strong>Browse the Menu</strong> –
+            Head over to the <a href="menu.html">Menu page</a> to see today's available dishes,
+            descriptions, and prices.
+          </li>
+          <li>
+            <strong>Place Your Order</strong> –
+            Go to the <a href="order.html">Order page</a>, fill in your student information,
+            select your items, and choose a pickup time.
+          </li>
+          <li>
+            <strong>Pick Up &amp; Enjoy</strong> –
+            Show up at the cafeteria at your chosen time. No waiting in line — your tray is
+            already prepared!
+          </li>
+        </ol>
+      </section>
+
+      <hr />
+
+      <!-- ===== WHY USE US SECTION: Benefits for students ===== -->
+      <section>
+        <h2>Why Use Chap's OnFood?</h2>
+        <p>Here are a few reasons why students love pre-ordering their meals:</p>
+
+        <!-- Unordered list of benefits -->
+        <ul>
+          <li><strong>Save Time</strong> – Pre-ordering takes less than 3 minutes and saves you 15–20 minutes of waiting.</li>
+          <li><strong>Easy to Use</strong> – No app download needed. Works in any browser on any device.</li>
+          <li><strong>Plan Your Day</strong> – Choose your pickup time so your meal fits around your class schedule.</li>
+          <li><strong>Always Fresh</strong> – Your food is prepared right before your pickup time, not hours in advance.</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <!-- ===== QUICK INFO TABLE: Key facts about the service ===== -->
+      <section>
+        <h2>Quick Info</h2>
+        <table>
+          <tr>
+            <th>Feature</th>
+            <th>Details</th>
+          </tr>
+          <tr>
+            <td>Who can order?</td>
+            <td>LCU students only (valid student ID required)</td>
+          </tr>
+          <tr>
+            <td>Order deadline</td>
+            <td>At least 30 minutes before your pickup time</td>
+          </tr>
+          <tr>
+            <td>Pickup location</td>
+            <td>LCU Cafeteria front counter</td>
+          </tr>
+          <tr>
+            <td>Service hours</td>
+            <td>Monday – Friday, 7:00 AM – 7:00 PM</td>
+          </tr>
+          <tr>
+            <td>Payment</td>
+            <td>Meal plan or cash at pickup</td>
+          </tr>
+        </table>
+      </section>
+
+      <hr />
+
+      <!-- ===== CALL TO ACTION ===== -->
+      <section>
+        <h2>Ready to Order?</h2>
+        <p>
+          <a class="cta-link" href="menu.html">Browse the Menu</a>
+          <a class="cta-link" href="order.html">Place Your Order</a>
+        </p>
+      </section>
+
+      <hr />
+
+      <!-- ===== FOOTER: Contact and extra information ===== -->
+      <footer>
+        <p><strong>Chap's OnFood</strong> – LCU Cafeteria Pre-Order System</p>
+        <p>5601 19th St, Lubbock, TX 79407</p>
+        <p>
+          Contact us:
+          <a href="mailto:chapsonline@lcu.edu">chapsonline@lcu.edu</a>
+        </p>
+        <p>2026 Lubbock Christian University Cafeteria</p>
+      </footer>
+
+    </div><!-- end #wrapper -->
+
+    <script src="main.js"></script>
+    <script>showGreeting();</script>
+  </body>
+</html>
