@@ -100,15 +100,26 @@ header {
     background-color: #003DA5;
     padding-top: 22px;
     padding-bottom: 18px;
-    padding-left: 120px;
+    padding-left: 200px;
     padding-right: 40px;
     border-bottom: 5px solid #5C3317;
     overflow: hidden;
     position: relative;
 }
 
+/* Every piece of text inside the blue header is white.
+   <em> is listed explicitly: the global em rule further up
+   is brown, and it was overriding the subtitle. */
+header h1,
+header h2,
+header h3,
+header p,
+header em,
+header span {
+    color: #FFFFFF;
+}
+
 header p {
-    color: #E8E4DF;
     font-size: 0.9em;
     font-style: italic;
     margin-top: 0;
@@ -118,12 +129,15 @@ header p {
 
 /* ===== 6. LOGO ===== */
 
+/* Anchored from the left so it stays put at any screen width.
+   The old "right: 812px" measured from the right edge and drifted. */
 #logo {
     position: absolute;
-    top: -15px;
-    right: 812px;
-    width: 172px;
-    height: 172px;
+    top: 6px;
+    left: 24px;
+    right: auto;
+    width: 160px;
+    height: 160px;
     object-fit: contain;
 }
 
@@ -341,33 +355,10 @@ footer a {
     line-height: 1.6;
 }
 
-/* ===== HEADER FIX ===== */
 
-header {
-    padding-left: 200px;
-}
-
-/* Anything sitting in the blue header is white, including <em>,
-   which is what was turning the subtitle brown. */
-header h1,
-header h2,
-header h3,
-header p,
-header em,
-header span {
-    color: #FFFFFF;
-}
-
-/* right: auto cancels the old right-edge positioning */
-#logo {
-    position: absolute;
-    top: 6px;
-    left: 24px;
-    right: auto;
-    width: 160px;
-    height: 160px;
-    object-fit: contain;
-}
+/* ===== SMALL SCREENS ===== */
+/* Below 640px the logo and the title fight for the same space,
+   so the logo goes back into the flow above the title. */
 
 @media (max-width: 640px) {
 
@@ -385,8 +376,22 @@ header span {
         display: block;
     }
 
+    h1 {
+        font-size: 1.8em;
+    }
+
     nav {
         float: none;
         margin-top: 14px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
