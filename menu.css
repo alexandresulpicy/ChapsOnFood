@@ -340,3 +340,53 @@ footer a {
     font-size: 0.97em;
     line-height: 1.6;
 }
+
+/* ===== HEADER FIX ===== */
+
+header {
+    padding-left: 200px;
+}
+
+/* Anything sitting in the blue header is white, including <em>,
+   which is what was turning the subtitle brown. */
+header h1,
+header h2,
+header h3,
+header p,
+header em,
+header span {
+    color: #FFFFFF;
+}
+
+/* right: auto cancels the old right-edge positioning */
+#logo {
+    position: absolute;
+    top: 6px;
+    left: 24px;
+    right: auto;
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+}
+
+@media (max-width: 640px) {
+
+    header {
+        padding-left: 24px;
+        padding-right: 24px;
+        text-align: center;
+    }
+
+    #logo {
+        position: static;
+        width: 110px;
+        height: 110px;
+        margin: 0 auto 8px;
+        display: block;
+    }
+
+    nav {
+        float: none;
+        margin-top: 14px;
+    }
+}
