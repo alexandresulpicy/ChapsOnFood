@@ -16,4 +16,4 @@ HTML, CSS, JavaScript. Built with AI assistance.
 Course project — Web Programming, Lubbock Christian University.
 
 ## Live
-[URL_VERCEL_A_REMPLACER]
+https://chaps-on-food.vercel.app
